@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دليل الاستخدام - منصتي">
+    <title>دليل الاستخدام - منصتي / Documentation - Platform</title>
+
+    <!-- Google Fonts - Cairo for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+
+    <style>
+        /* Documentation Specific Styles */
+        body {
+            background: #f5f5f5;
+            padding-top: 80px;
+            /* Offset for fixed navbar */
+        }
+
+        .doc-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .doc-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .doc-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-nav {
+            background: #111827;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 76px;
+            /* Below main navbar */
+            z-index: 90;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .doc-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .doc-nav a:hover,
+        .doc-nav a.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .doc-content {
+            padding: 3rem 2rem;
+        }
+
+        .doc-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .doc-section:last-child {
+            border-bottom: none;
+        }
+
+        .doc-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .doc-section h3 {
+            color: #374151;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+        }
+
+        .doc-section h4 {
+            color: #4b5563;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #dc2626;
+        }
+
+        pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-color);
+            direction: ltr;
+            text-align: left;
+        }
+
+        pre code {
+            background: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        /* Override Bootstrap Alert for clearer look */
+        .alert {
+            border: none;
+            border-left: 4px solid;
+            border-radius: 8px;
+        }
+
+        .file-structure {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            line-height: 2;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .doc-feature-card {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .doc-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .doc-feature-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        [dir="ltr"] .doc-nav {
+            text-align: left;
+        }
+
+        [dir="ltr"] pre {
+            border-left: 4px solid var(--primary-color);
+            border-right: none;
+        }
+
+        /* Adjustments for sticky nav */
+        html {
+            scroll-padding-top: 140px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled" id="mainNavbar" style="background-color: var(--bg-white);">
+        <div class="container gap-3">
+            <!-- Logo - Right side in RTL -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="../HTML/index.html">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span class="logo-text">منصتي</span>
+            </a>
+
+            <!-- Mobile Menu Toggle & Language -->
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Toggle (Dark/Light Mode) -->
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+
+                <!-- Language Toggle -->
+                <button class="btn-language" id="langToggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Menu - Center -->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/index.html#features" data-ar="المميزات"
+                            data-en="Features">المميزات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/index.html#pricing" data-ar="الأسعار"
+                            data-en="Pricing">الأسعار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/index.html#testimonials" data-ar="آراء العملاء"
+                            data-en="Testimonials">آراء العملاء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-ar="التوثيق" data-en="Documentation">التوثيق</a>
+                    </li>
+                </ul>
+
+                <!-- Right side buttons -->
+                <div class="d-flex align-items-center gap-3 mt-lg-0">
+                    <a href="../HTML/index.html" class="btn btn-outline-custom" data-ar="العودة للرئيسية"
+                        data-en="Back to Home">العودة للرئيسية</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="doc-container">
+        <header class="doc-header">
+            <h1>📚 دليل الاستخدام الكامل</h1>
+            <h1 class="h3 opacity-75">Complete Documentation</h1>
+            <p class="mt-3">قالب منصتي - Landing Page Template</p>
+            <p>الإصدار 1.0.0 | Version 1.0.0</p>
+        </header>
+
+        <div class="doc-nav">
+            <a href="#intro">المقدمة</a>
+            <a href="#installation">التثبيت</a>
+            <a href="#structure">الهيكل</a>
+            <a href="#customization">التخصيص</a>
+            <a href="#features">المميزات</a>
+            <a href="#support">الدعم</a>
+        </div>
+
+        <div class="doc-content">
+            <!-- المقدمة / Introduction -->
+            <section id="intro" class="doc-section">
+                <h2>📖 المقدمة / Introduction</h2>
+
+                <div class="alert alert-info d-flex align-items-center">
+                    <i class="fas fa-info-circle me-2 ms-2 fs-4"></i>
+                    <div>
+                        <strong>مرحباً!</strong> شكراً لشرائك قالب منصتي. هذا الدليل سيساعدك على البدء بسرعة وسهولة.
+                    </div>
+                </div>
+
+                <h3>ما هو هذا القالب؟</h3>
+                <p>
+                    قالب منصتي هو صفحة هبوط احترافية متعددة اللغات (عربي/إنجليزي) مع دعم كامل لـ RTL/LTR.
+                    مصمم خصيصاً لمنصات SaaS والمنتجات الرقمية والشركات الناشئة.
+                </p>
+
+                <h3>المميزات الرئيسية</h3>
+                <div class="feature-grid">
+                    <div class="doc-feature-card">
+                        <h4>🌐 دعم ثنائي اللغة</h4>
+                        <p>تبديل سلس بين العربية والإنجليزية</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>📱 تصميم متجاوب</h4>
+                        <p>يعمل على جميع الأجهزة والشاشات</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>⚡ سريع وخفيف</h4>
+                        <p>محسّن للأداء والسرعة</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>🎨 سهل التخصيص</h4>
+                        <p>متغيرات CSS منظمة وواضحة</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- التثبيت / Installation -->
+            <section id="installation" class="doc-section">
+                <h2>🚀 التثبيت والبدء / Installation & Getting Started</h2>
+
+                <h3>الخطوة 1: استخراج الملفات</h3>
+                <p>قم باستخراج ملف ZIP الذي حصلت عليه. ستجد الملفات التالية:</p>
+
+                <div class="file-structure">
+                    project/<br>
+                    ├── HTML/<br>
+                    │ └── index.html<br>
+                    ├── assets/<br>
+                    │ ├── css/style.css<br>
+                    │ └── js/script.js<br>
+                    ├── documentation/<br>
+                    │ └── documentation.html (هذا الملف)<br>
+                    └── README.md
+                </div>
+
+                <h3>الخطوة 2: فتح الملفات</h3>
+                <ol>
+                    <li>افتح ملف <code>index.html</code> في محرر النصوص المفضل لديك</li>
+                    <li>يمكنك استخدام VS Code, Sublime Text, أو أي محرر آخر</li>
+                    <li>افتح <code>index.html</code> في المتصفح لمعاينة الموقع</li>
+                </ol>
+
+                <h3>الخطوة 3: تشغيل خادم محلي (اختياري)</h3>
+                <p>لأفضل تجربة، استخدم خادم محلي:</p>
+
+                <pre><code># باستخدام Python
+python -m http.server 8000
+
+# باستخدام Node.js
+npx http-server
+
+# باستخدام PHP
+php -S localhost:8000</code></pre>
+
+                <div class="alert alert-success d-flex align-items-center">
+                    <i class="fas fa-check-circle me-2 ms-2 fs-4"></i>
+                    <div>
+                        <strong>نجح!</strong> الآن يمكنك الوصول للموقع على <code>http://localhost:8000</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الهيكل / Structure -->
+            <section id="structure" class="doc-section">
+                <h2>🏗️ هيكل الملفات / File Structure</h2>
+
+                <h3>index.html</h3>
+                <p>الملف الرئيسي للصفحة، يحتوي على:</p>
+                <ul>
+                    <li>شريط التنقل (Navbar)</li>
+                    <li>قسم البطل (Hero Section)</li>
+                    <li>قسم الشركات الموثوقة (Trusted By)</li>
+                    <li>إحصائيات (Statistics)</li>
+                    <li>المميزات (Features)</li>
+                    <li>من نحن (How It Works)</li>
+                    <li>فريق العمل (Our Team)</li>
+                    <li>المدونة (Blog)</li>
+                    <li>الأسعار (Pricing)</li>
+                    <li>آراء العملاء (Testimonials)</li>
+                    <li>الأسئلة الشائعة (FAQ)</li>
+                    <li>دعوة للإجراء (CTA)</li>
+                    <li>الفوتر (Footer)</li>
+                    <li>النماذج المنبثقة (Modals)</li>
+                </ul>
+
+                <h3>style.css</h3>
+                <p>ملف التنسيقات الرئيسي، منظم كالتالي:</p>
+                <ul>
+                    <li><strong>CSS Variables:</strong> المتغيرات القابلة للتخصيص</li>
+                    <li><strong>Global Styles:</strong> الأنماط العامة</li>
+                    <li><strong>Component Styles:</strong> أنماط كل قسم</li>
+                    <li><strong>Responsive Design:</strong> Media Queries</li>
+                    <li><strong>Animations:</strong> الحركات والتأثيرات</li>
+                </ul>
+
+                <h3>script.js</h3>
+                <p>ملف JavaScript يحتوي على:</p>
+                <ul>
+                    <li>تبديل اللغة (Language Toggle)</li>
+                    <li>إدارة النماذج المنبثقة (Modal Management)</li>
+                    <li>تبديل الأسعار (Pricing Toggle)</li>
+                    <li>الأكورديون (Accordion)</li>
+                    <li>التمرير السلس (Smooth Scrolling)</li>
+                    <li>معالجة النماذج (Form Handling)</li>
+                </ul>
+            </section>
+
+            <!-- التخصيص / Customization -->
+            <section id="customization" class="doc-section">
+                <h2>🎨 دليل التخصيص / Customization Guide</h2>
+
+                <h3>1. تغيير الألوان / Change Colors</h3>
+                <p>افتح <code>style.css</code> وابحث عن <code>:root</code> في بداية الملف:</p>
+
+                <pre><code>:root {
+    /* الألوان الأساسية */
+    --primary-color: #1D4ED8;  /* غيّر هذا */
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    
+    /* ألوان النصوص */
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    
+    /* ألوان الخلفيات */
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-gray: #f3f4f6;
+}</code></pre>
+
+                <div class="alert alert-warning d-flex align-items-center">
+                    <i class="fas fa-exclamation-triangle me-2 ms-2 fs-4"></i>
+                    <div>
+                        <strong>ملاحظة:</strong> عند تغيير اللون الأساسي، تأكد من تحديث جميع المتغيرات المرتبطة به.
+                    </div>
+                </div>
+
+                <h3>2. تغيير الخطوط / Change Fonts</h3>
+                <p>في ملف <code>index.html</code>، ابحث عن:</p>
+
+                <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"&gt;</code></pre>
+
+                <p>ثم في <code>style.css</code>:</p>
+
+                <pre><code>body {
+    font-family: 'Cairo', sans-serif;
+}</code></pre>
+
+                <h3>3. تغيير النصوص / Change Texts</h3>
+                <p>كل عنصر له نصين: عربي وإنجليزي</p>
+
+                <pre><code>&lt;h2 data-ar="النص بالعربية" data-en="English Text"&gt;
+    النص بالعربية
+&lt;/h2&gt;</code></pre>
+
+                <p>لتغيير النص:</p>
+                <ol>
+                    <li>غيّر النص داخل <code>data-ar</code> للنص العربي</li>
+                    <li>غيّر النص داخل <code>data-en</code> للنص الإنجليزي</li>
+                    <li>غيّر النص داخل الوسم للقيمة الافتراضية</li>
+                </ol>
+
+                <h3>4. تغيير الصور / Change Images</h3>
+                <p>ابحث عن وسوم <code>&lt;img&gt;</code> في HTML:</p>
+
+                <pre><code>&lt;img src="your-image-url.jpg" alt="وصف الصورة"&gt;</code></pre>
+
+                <p>استبدل <code>src</code> برابط صورتك</p>
+
+                <h3>5. إضافة قسم جديد / Add New Section</h3>
+                <p>مثال على إضافة قسم جديد:</p>
+
+                <pre><code>&lt;section class="new-section"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="section-header text-center" data-aos="fade-up"&gt;
+            &lt;h2 class="section-title" 
+                data-ar="عنوان القسم" 
+                data-en="Section Title"&gt;
+                عنوان القسم
+            &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;!-- محتوى القسم هنا --&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                <p>ثم أضف التنسيقات في <code>style.css</code>:</p>
+
+                <pre><code>.new-section {
+    padding: 5rem 0;
+    background: var(--bg-gray);
+}
+
+.new-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}</code></pre>
+            </section>
+
+            <!-- المميزات / Features -->
+            <section id="features" class="doc-section">
+                <h2>✨ شرح المميزات / Features Explained</h2>
+
+                <h3>1. تبديل اللغة / Language Toggle</h3>
+                <p>الزر في شريط التنقل يبدل بين العربية والإنجليزية:</p>
+                <ul>
+                    <li>يغير اتجاه الصفحة (RTL ↔ LTR)</li>
+                    <li>يبدل ملف Bootstrap (RTL ↔ LTR)</li>
+                    <li>يحدّث جميع النصوص</li>
+                </ul>
+
+                <pre><code>// في script.js
+function toggleLanguage() {
+    isRTL = !isRTL;
+    currentLang = isRTL ? 'ar' : 'en';
+    // ... المزيد من الكود
+}</code></pre>
+
+                <h3>2. تبديل الأسعار / Pricing Toggle</h3>
+                <p>التبديل بين الأسعار الشهرية والسنوية:</p>
+                <ul>
+                    <li>يحسب السعر السنوي تلقائياً (شهري × 12 × 0.8)</li>
+                    <li>يعرض شارة "وفّر 20%"</li>
+                    <li>تأثيرات سلسة عند التبديل</li>
+                </ul>
+
+                <h3>3. النماذج المنبثقة / Modals</h3>
+
+                <h4>نموذج تسجيل الدخول/التسجيل</h4>
+                <ul>
+                    <li>تبويبات سلسة بين تسجيل الدخول والتسجيل</li>
+                    <li>إظهار/إخفاء كلمة المرور</li>
+                    <li>تسجيل دخول اجتماعي (Google, Facebook)</li>
+                    <li>التحقق من تطابق كلمات المرور</li>
+                </ul>
+
+                <h4>نموذج اتصل بنا</h4>
+                <ul>
+                    <li>حقول كاملة (اسم، بريد، هاتف، موضوع، رسالة)</li>
+                    <li>معلومات الاتصال في الأسفل</li>
+                    <li>التحقق من الحقول المطلوبة</li>
+                </ul>
+
+                <h3>4. الأنيميشن / Animations</h3>
+                <p>استخدام مكتبة AOS للأنيميشن عند التمرير:</p>
+
+                <pre><code>&lt;div data-aos="fade-up" data-aos-delay="100"&gt;
+    المحتوى هنا
+&lt;/div&gt;</code></pre>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>التأثير</th>
+                            <th>الوصف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>fade-up</code></td>
+                            <td>يظهر من الأسفل للأعلى</td>
+                        </tr>
+                        <tr>
+                            <td><code>fade-right</code></td>
+                            <td>يظهر من اليسار لليمين</td>
+                        </tr>
+                        <tr>
+                            <td><code>zoom-in</code></td>
+                            <td>يظهر بتأثير التكبير</td>
+                        </tr>
+                        <tr>
+                            <td><code>data-aos-delay</code></td>
+                            <td>تأخير بالميلي ثانية</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- الدعم / Support -->
+            <section id="support" class="doc-section">
+                <h2>💬 الدعم والمساعدة / Support & Help</h2>
+
+                <h3>الأسئلة الشائعة / FAQ</h3>
+
+                <h4>س: كيف أغير الشعار؟</h4>
+                <p>ج: في <code>index.html</code>، ابحث عن <code>class="logo-icon"</code> واستبدل المحتوى بشعارك.</p>
+
+                <h4>س: هل يمكن إضافة المزيد من اللغات؟</h4>
+                <p>ج: نعم، أضف <code>data-fr</code> أو <code>data-de</code> وعدّل دالة <code>toggleLanguage()</code></p>
+
+                <h4>س: كيف أزيل قسم معين؟</h4>
+                <p>ج: احذف وسم <code>&lt;section&gt;</code> الخاص بالقسم من HTML</p>
+
+                <h4>س: الأيقونات لا تظهر، ماذا أفعل؟</h4>
+                <p>ج: تأكد من اتصالك بالإنترنت أو قم بتحميل Font Awesome محلياً</p>
+
+                <h3>طرق الدعم / Support Channels</h3>
+                <div class="feature-grid">
+                    <div class="doc-feature-card">
+                        <h4>📧 البريد الإلكتروني</h4>
+                        <p>support@platform.com</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>💬 الدردشة المباشرة</h4>
+                        <p>متاحة على موقعنا</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>📚 التوثيق</h4>
+                        <p>هذا الملف</p>
+                    </div>
+                    <div class="doc-feature-card">
+                        <h4>🎥 فيديوهات تعليمية</h4>
+                        <p>قريباً على YouTube</p>
+                    </div>
+                </div>
+
+                <h3>التحديثات / Updates</h3>
+                <p>
+                    نحن نعمل باستمرار على تحسين القالب. ستحصل على التحديثات المجانية مدى الحياة.
+                    تابع بريدك الإلكتروني للحصول على إشعارات التحديثات.
+                </p>
+
+                <div class="alert alert-info d-flex align-items-center">
+                    <i class="fas fa-info-circle me-2 ms-2 fs-4"></i>
+                    <div>
+                        <strong>نصيحة:</strong> قبل التحديث، احتفظ بنسخة احتياطية من ملفاتك المخصصة!
+                    </div>
+                </div>
+
+                <h3>الموارد الإضافية / Additional Resources</h3>
+                <ul>
+                    <li><strong>Bootstrap 5 Docs:</strong> <a href="https://getbootstrap.com/docs/5.3"
+                            target="_blank">getbootstrap.com</a></li>
+                    <li><strong>Font Awesome Icons:</strong> <a href="https://fontawesome.com/icons"
+                            target="_blank">fontawesome.com</a></li>
+                    <li><strong>AOS Library:</strong> <a href="https://michalsnik.github.io/aos/"
+                            target="_blank">michalsnik.github.io/aos</a></li>
+                    <li><strong>Google Fonts:</strong> <a href="https://fonts.google.com"
+                            target="_blank">fonts.google.com</a></li>
+                </ul>
+            </section>
+
+            <!-- الخاتمة / Conclusion -->
+            <section class="doc-section">
+                <h2>🎉 شكراً لك! / Thank You!</h2>
+
+                <p style="font-size: 1.2rem; line-height: 2;">
+                    نأمل أن يساعدك هذا القالب في إنشاء موقع رائع!<br>
+                    إذا كنت راضياً عن القالب، نرجو منك:<br>
+                </p>
+
+                <div class="text-center my-4">
+                    <a href="#" class="btn btn-primary-custom mx-2">⭐ قيّم القالب</a>
+                    <a href="#" class="btn btn-outline-custom mx-2">📧 راسلنا</a>
+                    <a href="#" class="btn btn-outline-custom mx-2">🐦 تابعنا</a>
+                </div>
+
+                <div class="alert alert-success text-center">
+                    <strong>✨ نتمنى لك التوفيق في مشروعك! ✨</strong><br>
+                    Good luck with your project!
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <!-- Logo & Description -->
+                <div class="col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <div class="logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span class="logo-text">منصتي</span>
+                    </div>
+                    <p class="footer-desc" data-ar="منصة متكاملة لإدارة مشاريعك الرقمية بكفاءة عالية"
+                        data-en="A complete platform to manage your digital projects efficiently">منصة متكاملة لإدارة
+                        مشاريعك الرقمية بكفاءة عالية</p>
+                </div>
+
+                <!-- Product Links -->
+                <div class="col-4 col-lg-3">
+                    <h5 class="footer-title" data-ar="المنتج" data-en="Product">المنتج</h5>
+                    <ul class="footer-links px-0">
+                        <li><a href="../HTML/index.html#features" data-ar="المميزات" data-en="Features">المميزات</a>
+                        </li>
+                        <li><a href="../HTML/index.html#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a></li>
+                        <li><a href="#" data-ar="التحديثات" data-en="Updates">التحديثات</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-4 col-lg-3">
+                    <h5 class="footer-title" data-ar="الشركة" data-en="Company">الشركة</h5>
+                    <ul class="footer-links px-0">
+                        <li><a href="#" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+                        <li><a href="#" data-ar="المدونة" data-en="Blog">المدونة</a></li>
+                        <li><a href="#" data-ar="الوظائف" data-en="Careers">الوظائف</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Links -->
+                <div class="col-4 col-lg-3">
+                    <h5 class="footer-title" data-ar="الدعم" data-en="Support">الدعم</h5>
+                    <ul class="footer-links px-0">
+                        <li><a href="#" data-ar="مركز المساعدة" data-en="Help Center">مركز المساعدة</a></li>
+                        <li><a href="#" data-ar="التوثيق" data-en="Documentation">التوثيق</a></li>
+                        <li><a href="#" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="copyright" data-ar="© 2026 جميع الحقوق محفوظة" data-en="© 2026 All Rights Reserved">© 2026
+                    جميع الحقوق محفوظة</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./../assets/js/script.js"></script>
+
+    <script>
+        // Internal script for doc navigation active state
+        const docNavLinks = document.querySelectorAll('.doc-nav a');
+
+        docNavLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                docNavLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
