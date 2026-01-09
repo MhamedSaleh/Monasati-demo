@@ -306,3 +306,4 @@ This template is ready for ThemeForest after adding:
 2. Design files (PSD/Figma)
 3. Real images and logos
 4. W3C Validation testing
+ 
