@@ -89,6 +89,10 @@ function initTeamSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
             640: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -121,6 +125,10 @@ function initBlogSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
             640: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -149,6 +157,10 @@ function initCustomerSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
             640: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -691,6 +703,10 @@ function initTeamSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
             640: {
                 slidesPerView: 2,
                 spaceBetween: 10,
@@ -722,6 +738,10 @@ function initBlogSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
             640: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
@@ -756,6 +776,10 @@ function initCustomerSwiper() {
             clickable: true,
         },
         breakpoints: {
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
             640: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
