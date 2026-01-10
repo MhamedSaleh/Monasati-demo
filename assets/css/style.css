@@ -415,6 +415,12 @@ section {
     transition: var(--transition);
 }
 
+#testimonials .swiper-slide,
+#blog .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
 .swiper-slide:hover {
     opacity: 1;
     filter: grayscale(0%);
@@ -688,6 +694,8 @@ section {
     background: var(--bg-gray);
     padding: 2rem;
     border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
