@@ -89,7 +89,7 @@ function initTeamSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 30,
             },
@@ -125,7 +125,7 @@ function initBlogSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
@@ -157,7 +157,7 @@ function initCustomerSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
@@ -703,7 +703,7 @@ function initTeamSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
@@ -738,7 +738,7 @@ function initBlogSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
@@ -776,7 +776,7 @@ function initCustomerSwiper() {
             clickable: true,
         },
         breakpoints: {
-            400: {
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
