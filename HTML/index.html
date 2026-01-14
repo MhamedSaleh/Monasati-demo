@@ -4,17 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="منصة متكاملة لإدارة مشاريعك الرقمية بكفاءة عالية">
-    <meta name="keywords" content="منصة رقمية, إدارة مشاريع, SaaS">
-    <meta name="author" content="منصتي">
+    <meta name="description"
+        content="محاميك - استشارات قانونية وخدمات محاماة للأفراد والشركات. عقود، تأسيس شركات، أحوال شخصية، مدني وتجاري.">
+    <meta name="keywords" content="محاميك, محامي, استشارات قانونية, تأسيس شركات, عقود, أحوال شخصية, مصر">
+    <meta name="author" content="Mohameek">
 
-    <title>منصتي - حول فكرتك إلى منتج رقمي ناجح</title>
+    <title>محاميك | Mohameek - استشارات وخدمات قانونية باحتراف</title>
 
-    <!-- Google Fonts - Cairo for Arabic -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
+    <style>
+        .hero-section {
+            background-color: var(--bg-white);
+            background-image:
+                linear-gradient(rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0.95)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            position: relative;
+            padding-top: 180px;
+            padding-bottom: 120px;
+        }
+
+        .hero-stats-strip {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: var(--radius-lg);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .hero-stat-item {
+            text-align: center;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stat-item:last-child {
+            border-left: none;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trust-badge-container {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: #000;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+    </style>
 
     <!-- Bootstrap 5 RTL CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
@@ -43,9 +110,9 @@
             <!-- Logo - Right side in RTL -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
                 <div class="logo-icon">
-                    <i class="fas fa-bolt"></i>
+                    <i class="fas fa-balance-scale"></i>
                 </div>
-                <span class="logo-text">منصتي</span>
+                <span class="logo-text">محاميك | Mohameek</span>
             </a>
 
             <!-- Mobile Menu Toggle & Language -->
@@ -72,219 +139,345 @@
             <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features" data-ar="المميزات" data-en="Features">المميزات</a>
+                        <a class="nav-link" href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
+                        <a class="nav-link" href="#process" data-ar="آلية العمل" data-en="Process">آلية العمل</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials" data-ar="آراء العملاء" data-en="Testimonials">آراء
-                            العملاء</a>
+                        <a class="nav-link" href="#testimonials" data-ar="قصص نجاح" data-en="Success Stories">قصص
+                            نجاح</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="openContactModal(); return false;" data-ar="اتصل بنا"
-                            data-en="Contact">اتصل بنا</a>
+                        <a class="nav-link" href="#" onclick="openContactModal(); return false;" data-ar="تواصل معنا"
+                            data-en="Contact Us">تواصل معنا</a>
                     </li>
                 </ul>
 
                 <!-- Right side buttons -->
                 <div class="d-flex align-items-center gap-3 mt-lg-0">
-                    <button class="btn btn-link text-decoration-none" onclick="openLoginModal()" data-ar="تسجيل الدخول"
-                        data-en="Login">تسجيل الدخول</button>
-                    <button class="btn btn-primary-custom" data-ar="ابدأ الآن" data-en="Get Started">ابدأ الآن</button>
+                    <button class="btn btn-link text-decoration-none" onclick="openLoginModal()" data-ar="بوابة العملاء"
+                        data-en="Client Portal">بوابة العملاء</button>
+                    <button class="btn btn-primary-custom" data-ar="احجز استشارة" data-en="Book Consultation">احجز
+                        استشارة</button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <!-- Text Content - Right in RTL -->
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="hero-title" data-ar="حول فكرتك إلى منتج رقمي ناجح"
-                        data-en="Transform Your Idea Into Successful Digital Product">
-                        حول فكرتك إلى منتج رقمي ناجح
-                    </h1>
-                    <p class="hero-subtitle"
-                        data-ar="منصة متكاملة لإدارة مشاريعك الرقمية بكفاءة عالية. نوفر لك الأدوات والإمكانيات لتحقيق أهدافك."
-                        data-en="Complete platform to manage your digital projects efficiently. We provide you with tools and capabilities to achieve your goals.">
-                        منصة متكاملة لإدارة مشاريعك الرقمية بكفاءة عالية. نوفر لك الأدوات والإمكانيات لتحقيق أهدافك.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary-custom btn-lg" data-ar="ابدأ مجاناً" data-en="Start Free">
-                            ابدأ مجاناً
-                            <i class="fas fa-arrow-left ms-2"></i>
-                        </button>
-                        <button class="btn btn-outline-custom btn-lg" data-ar="شاهد العرض التوضيحي"
-                            data-en="Watch Demo">
-                            شاهد العرض التوضيحي
-                        </button>
-                    </div>
-                </div>
+    <section id="home" class="hero-section position-relative overflow-hidden text-center">
+        <div class="container position-relative z-1">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="badge bg-transparent border border-warning text-warning mb-3 px-3 py-2 rounded-pill"
+                    style="letter-spacing: 1px; font-size: 0.8rem;">
+                    <i class="fas fa-balance-scale me-2"></i> شريكك القانوني الأول
+                </span>
 
-                <!-- Dashboard Mockup - Left in RTL -->
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <div class="dashboard-mockup">
-                        <div class="browser-window">
-                            <!-- Browser Header -->
-                            <div class="browser-header">
-                                <span class="browser-dot dot-red"></span>
-                                <span class="browser-dot dot-yellow"></span>
-                                <span class="browser-dot dot-green"></span>
-                            </div>
-                            <!-- Dashboard Image -->
-                            <img src="https://images.unsplash.com/photo-1758411898021-ef0dadaaa295?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                                alt="Dashboard" class="dashboard-image">
-                        </div>
-                        <!-- Floating Icons -->
-                        <div class="floating-icon floating-icon-1">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="floating-icon floating-icon-2">
-                            <i class="fas fa-users"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <h1 class="hero-title display-3 mb-4 mx-auto" style="max-width: 900px;"
+                    data-ar="ندافع عن حقوقك.. بكل قوة واحترافية"
+                    data-en="Defending Your Rights... With Strength and Integrity">
+                    ندافع عن حقوقك.. <span style="color: var(--primary-color);">بكل قوة واحترافية</span>
+                </h1>
 
-    <!-- ==================== TRUSTED BY SECTION ==================== -->
-    <section class="trusted-section">
-        <div class="container">
-            <p class="text-center text-muted mb-4" data-ar="موثوق به من قبل أكثر من 500 شركة"
-                data-en="Trusted by over 500 companies">
-                موثوق به من قبل أكثر من 500 شركة
-            </p>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="logo-item">ProSuite</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">SmartHub</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">NextGen</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">DataFlow</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">SmartHub</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">CloudNet</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="logo-item">TechCorp</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FEATURES SECTION ==================== -->
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title" data-ar="لماذا تختارنا" data-en="Why Choose Us">لماذا تختارنا</h2>
-                <p class="section-subtitle" data-ar="نقدم لك أفضل الحلول لتطوير أعمالك"
-                    data-en="We provide the best solutions for your business growth">
-                    نقدم لك أفضل الحلول لتطوير أعمالك
+                <p class="hero-subtitle lead mb-5 mx-auto" style="max-width: 700px; color: #ccc;"
+                    data-ar="في 'محاميك'، نجمع بين الخبرة العريقة والرؤية القانونية الحديثة لتقديم حلول متكاملة تضمن لك راحة البال وحفظ الحقوق."
+                    data-en="At 'Mohameek', we combine heritage expertise with modern legal insight to provide integrated solutions that guarantee peace of mind and rights preservation.">
+                    في 'محاميك'، نجمع بين الخبرة العريقة والرؤية القانونية الحديثة لتقديم حلول متكاملة تضمن لك راحة
+                    البال وحفظ الحقوق.
                 </p>
-            </div>
 
-            <div class="row g-4">
-                <!-- Feature 1 -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3 class="feature-title" data-ar="سهولة الاستخدام" data-en="Easy to Use">سهولة الاستخدام</h3>
-                        <p class="feature-desc" data-ar="واجهة بسيطة وسهلة لا تحتاج إلى خبرة تقنية"
-                            data-en="Simple and intuitive interface, no technical expertise needed">
-                            واجهة بسيطة وسهلة لا تحتاج إلى خبرة تقنية
-                        </p>
+                <div class="d-flex justify-content-center gap-3 mb-5">
+                    <a href="#contactModal" onclick="openContactModal(); return false;"
+                        class="btn btn-primary-custom btn-lg px-5 shadow-lg" data-ar="احجز استشارة"
+                        data-en="Book Consultation">
+                        احجز استشارة <i class="fas fa-gavel ms-2"></i>
+                    </a>
+                    <a href="#services" class="btn btn-outline-light btn-lg px-5" data-ar="خدماتنا"
+                        data-en="Our Services">
+                        خدماتنا
+                    </a>
+                </div>
+
+                <!-- HERO STATS STRIP -->
+                <div class="hero-stats-strip text-start-rtl">
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-number">+15</div>
+                        <div class="hero-stat-label">سنة خبرة</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-number">+500</div>
+                        <div class="hero-stat-label">قضية ناجحة</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-number">98%</div>
+                        <div class="hero-stat-label">نسبة نجاح</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-number">+20</div>
+                        <div class="hero-stat-label">مستشار قانوني</div>
                     </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <!-- TRUST BADGE ABSOLUTE -->
+                <div class="trust-badge-container">
+                    <i class="fas fa-shield-alt fa-lg"></i>
+                    <span>مرخص من وزارة العدل</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-overlay"
+            style="background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15), transparent 40%); pointer-events: none;">
+        </div>
+    </section>
+
+    <!-- ==================== TRUST BAR (PARTNERS) ==================== -->
+    <section class="trusted-section py-4 border-bottom" style="background: var(--bg-light);">
+        <div class="container">
+            <p class="text-center text-muted mb-4 small fw-bold" style="letter-spacing: 2px;"
+                data-ar="شركاء النجاح والاعتمادات" data-en="ACCREDITATIONS & PARTNERS">
+                شركاء النجاح والاعتمادات
+            </p>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-50 grayscale-logos">
+                <div class="h4 mb-0 text-muted"><i class="fas fa-university me-2"></i> وزارة العدل</div>
+                <div class="h4 mb-0 text-muted"><i class="fas fa-gavel me-2"></i> نقابة المحامين</div>
+                <div class="h4 mb-0 text-muted"><i class="fas fa-globe me-2"></i> التحكيم الدولي</div>
+                <div class="h4 mb-0 text-muted"><i class="fas fa-landmark me-2"></i> الهيئة العامة للاستثمار</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION (ACCORDION STYLE) ==================== -->
+    <section id="services" class="services-section bg-white position-relative">
+        <div class="container">
+            <div class="row">
+                <!-- Section Header (Sticky Side) -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="sticky-top" style="top: 100px;">
+                        <span class="text-primary fw-bold text-uppercase mb-2 d-block"
+                            style="letter-spacing: 2px;">تخصصاتنا</span>
+                        <h2 class="section-title display-5 mb-4" data-ar="خبرة قانونية شاملة"
+                            data-en="Comprehensive Legal Expertise">خبرة قانونية شاملة</h2>
+                        <p class="text-muted mb-4"
+                            data-ar="نقدم مجموعة واسعة من الخدمات القانونية المصممة خصيصاً لتلبية احتياجات الأفراد والشركات على حد سواء."
+                            data-en="We offer a wide range of legal services tailored to meet the needs of both individuals and corporations.">
+                            نقدم مجموعة واسعة من الخدمات القانونية المصممة خصيصاً لتلبية احتياجات الأفراد والشركات على
+                            حد سواء.
+                        </p>
+                        <a href="#contactModal" onclick="openContactModal(); return false;"
+                            class="btn btn-outline-custom" data-ar="استشارة خاصة" data-en="Private Consultation">
+                            استشارة خاصة <i class="fas fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Accordion Services -->
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="accordion custom-accordion" id="servicesAccordion">
+
+                        <!-- Service 1: Corporate -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold py-4 px-4 bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fas fa-building text-primary me-3 fa-lg"></i>
+                                    <span class="fs-5" data-ar="تأسيس الشركات وحوكمتها"
+                                        data-en="Corporate Formation & Governance">تأسيس الشركات وحوكمتها</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body p-4 bg-white">
+                                    <p class="text-muted mb-3">نقدم دعماً قانونياً كاملاً للشركات الناشئة والكبرى، بدءاً
+                                        من إجراءات التأسيس وحتى صياغة اللوائح الداخلية وعقود الشراكة.</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary-light text-secondary rounded-pill px-3">عقود
+                                            تأسيس</span>
+                                        <span class="badge bg-secondary-light text-secondary rounded-pill px-3">تسجيل
+                                            تجاري</span>
+                                        <span class="badge bg-secondary-light text-secondary rounded-pill px-3">ملكية
+                                            فكرية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 2: Contracts -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-file-signature text-primary me-3 fa-lg"></i>
+                                    <span class="fs-5" data-ar="صياغة العقود والاتفاقيات"
+                                        data-en="Contracts Drafting">صياغة العقود والاتفاقيات</span>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body p-4 bg-white">
+                                    <p class="text-muted mb-3">صياغة ومراجعة كافة أنواع العقود التجارية والمدنية لضمان
+                                        حماية حقوقك وتقليل المخاطر القانونية المستقبلية.</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary-light text-secondary rounded-pill px-3">عقود
+                                            عمل</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">شراكة</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">NDA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3: Litigation -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-balance-scale text-primary me-3 fa-lg"></i>
+                                    <span class="fs-5" data-ar="التقاضي والتمثيل القانوني"
+                                        data-en="Litigation & Representation">التقاضي والتمثيل القانوني</span>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body p-4 bg-white">
+                                    <p class="text-muted mb-3">تمثيل العملاء أمام كافة المحاكم والجهات القضائية في
+                                        القضايا المدنية، التجارية، والعمالية بكفاءة عالية.</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">مرافعات</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">استئناف</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">تحكيم</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 4: Family Law -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="fas fa-users text-primary me-3 fa-lg"></i>
+                                    <span class="fs-5" data-ar="قضايا الأسرة والأحوال الشخصية"
+                                        data-en="Family Law">قضايا الأسرة والأحوال الشخصية</span>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body p-4 bg-white">
+                                    <p class="text-muted mb-3">معالجة قضايا الأسرة بسرية تامة واحترافية، بما في ذلك
+                                        قضايا الزواج والطلاق والميراث والوصاية.</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">ميراث</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">طلاق</span>
+                                        <span
+                                            class="badge bg-secondary-light text-secondary rounded-pill px-3">نفقة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .custom-accordion .accordion-button:not(.collapsed) {
+                background-color: var(--primary-light);
+                color: var(--primary-dark);
+                box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+            }
+
+            .custom-accordion .accordion-button:focus {
+                box-shadow: none;
+                border-color: rgba(0, 0, 0, .125);
+            }
+
+            .bg-secondary-light {
+                background-color: #f3f4f6;
+            }
+        </style>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US (TIMELINE) ==================== -->
+    <section class="why-choose-us py-5" style="background: var(--bg-gray);">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title" data-ar="لماذا تختار محاميك؟" data-en="Why Choose Mohameek?">لماذا تختار
+                    محاميك؟</h2>
+            </div>
+
+            <div class="timeline-container position-relative mx-auto" style="max-width: 800px;">
+                <!-- Vertical Line -->
+                <div class="position-absolute h-100 bg-secondary"
+                    style="width: 2px; right: 50%; transform: translateX(50%); top: 0; opacity: 0.2;"></div>
+
+                <!-- Item 1 -->
+                <div class="row mb-5 align-items-center" data-aos="fade-up">
+                    <div class="col-md-5 text-md-start text-center">
+                        <h4 class="fw-bold mb-2">خبرة متراكمة</h4>
+                        <p class="text-muted small">أكثر من 15 عاماً من الخبرة في مختلف المجالات القانونية.</p>
+                    </div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-lg border border-4 border-white"
+                            style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <i class="fas fa-history"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="row mb-5 align-items-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="bg-dark text-warning rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-lg border border-4 border-white"
+                            style="width: 60px; height: 60px; z-index: 2; position: relative;">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="feature-title" data-ar="أمان عالي" data-en="High Security">أمان عالي</h3>
-                        <p class="feature-desc" data-ar="حماية بيانات متقدمة وتشفير شامل"
-                            data-en="Advanced data protection and comprehensive encryption">
-                            حماية بيانات متقدمة وتشفير شامل
-                        </p>
+                    </div>
+                    <div class="col-md-5 text-md-end text-center">
+                        <h4 class="fw-bold mb-2">خصوصية تامة</h4>
+                        <p class="text-muted small">نحن نتعامل مع ملفاتك بأعلى معايير السرية والأمان.</p>
                     </div>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-comment-dots"></i>
+                <!-- Item 3 -->
+                <div class="row align-items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-5 text-md-start text-center">
+                        <h4 class="fw-bold mb-2">فريق متخصص</h4>
+                        <p class="text-muted small">نخبة من المحامين المتخصصين في كافة الفروع القانونية.</p>
+                    </div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-lg border border-4 border-white"
+                            style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3 class="feature-title" data-ar="دعم فني 24/7" data-en="24/7 Support">دعم فني 24/7</h3>
-                        <p class="feature-desc" data-ar="فريق دعم متاح على مدار الساعة"
-                            data-en="Support team available around the clock">
-                            فريق دعم متاح على مدار الساعة
-                        </p>
                     </div>
+                    <div class="col-md-5"></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ==================== Statistics SECTION ==================== -->
-    <section class="stats-section py-5 bg-light text-dark">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-6 col-md-3" data-aos="zoom-in">
-                    <div class="stat-item">
-                        <h2 class="fw-bold">+10k</h2>
-                        <p class="text-muted" data-ar="مستخدم نشط" data-en="Active Users">مستخدم نشط</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="stat-item">
-                        <h2 class="fw-bold">+500</h2>
-                        <p class="text-muted" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="stat-item">
-                        <h2 class="fw-bold">99%</h2>
-                        <p class="text-muted" data-ar="نسبة الرضا" data-en="Satisfaction Rate">نسبة الرضا</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="stat-item">
-                        <h2 class="fw-bold">24/7</h2>
-                        <p class="text-muted" data-ar="دعم فني" data-en="Support">دعم فني</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==================== HOW IT WORKS SECTION ==================== -->
-    <section class="how-section">
+    <!-- ==================== HOW IT WORKS SECTION (PROCESS) ==================== -->
+    <section id="process" class="how-section">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title" data-ar="كيف يعمل" data-en="How It Works">كيف يعمل</h2>
-                <p class="section-subtitle" data-ar="ثلاث خطوات بسيطة للبدء"
-                    data-en="Three simple steps to get started">
-                    ثلاث خطوات بسيطة للبدء
+                <h2 class="section-title" data-ar="آلية العمل" data-en="How It Works">آلية العمل</h2>
+                <p class="section-subtitle" data-ar="خطوات مدروسة لحماية حقوقك"
+                    data-en="Systematic steps to protect your rights">
+                    خطوات مدروسة لحماية حقوقك
                 </p>
             </div>
 
@@ -292,601 +485,577 @@
                 <!-- Step 1 -->
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="100">
                     <div class="step-circle">
-                        <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-comments"></i>
                         <span class="step-number">1</span>
                     </div>
-                    <h3 class="step-title" data-ar="أنشئ حسابك" data-en="Create Account">أنشئ حسابك</h3>
-                    <p class="step-desc" data-ar="سجل مجاناً في دقائق" data-en="Sign up for free in minutes">سجل مجاناً
-                        في دقائق</p>
+                    <h3 class="step-title" data-ar="الاستشارة الأولية" data-en="Initial Consultation">الاستشارة الأولية
+                    </h3>
+                    <p class="step-desc" data-ar="نسمع منك تفاصيل القضية ونحلل وضعك القانوني"
+                        data-en="We listen to your case details and analyze your legal situation">نسمع منك تفاصيل القضية
+                        ونحلل وضعك القانوني</p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="step-circle">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-file-signature"></i>
                         <span class="step-number">2</span>
                     </div>
-                    <h3 class="step-title" data-ar="خصص إعداداتك" data-en="Customize Settings">خصص إعداداتك</h3>
-                    <p class="step-desc" data-ar="اختر الخطة المناسبة لك" data-en="Choose the plan that suits you">اختر
-                        الخطة المناسبة لك</p>
+                    <h3 class="step-title" data-ar="دراسة الملف" data-en="Case Study">دراسة الملف</h3>
+                    <p class="step-desc" data-ar="وضع الاستراتيجية القانونية الأنسب وتجهيز المستندات"
+                        data-en="Developing the best legal strategy and preparing documents">وضع الاستراتيجية القانونية
+                        الأنسب وتجهيز المستندات</p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="300">
                     <div class="step-circle">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-gavel"></i>
                         <span class="step-number">3</span>
                     </div>
-                    <h3 class="step-title" data-ar="ابدأ العمل" data-en="Start Working">ابدأ العمل</h3>
-                    <p class="step-desc" data-ar="انطلق وحقق أهدافك" data-en="Launch and achieve your goals">انطلق وحقق
-                        أهدافك</p>
+                    <h3 class="step-title" data-ar="التنفيذ والمتابعة" data-en="Execution & Follow-up">التنفيذ والمتابعة
+                    </h3>
+                    <p class="step-desc" data-ar="البدء في الإجراءات القانونية أو التمثيل القضائي حتى الوصول للحق"
+                        data-en="Starting legal procedures or judicial representation until rights are secured">البدء في
+                        الإجراءات القانونية أو التمثيل القضائي حتى الوصول للحق</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== PRICING SECTION ==================== -->
+    <!-- ==================== PRICING SECTION (CONSULTATION PLANS) ==================== -->
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title" data-ar="خطط الأسعار" data-en="Pricing Plans">خطط الأسعار</h2>
-                <p class="section-subtitle" data-ar="اختر الخطة المناسبة لك"
-                    data-en="Choose the plan that fits your needs">
-                    اختر الخطة المناسبة لك
+                <h2 class="section-title" data-ar="باقات الاستشارات" data-en="Consultation Packages">باقات الاستشارات
+                </h2>
+                <p class="section-subtitle" data-ar="اختر الباقة المناسبة لاحتياجاتك القانونية"
+                    data-en="Choose the package that fits your legal needs">
+                    اختر الباقة المناسبة لاحتياجاتك القانونية
                 </p>
 
-                <!-- Pricing Toggle -->
-                <div class="pricing-toggle">
-                    <button class="toggle-btn active" data-period="monthly" onclick="togglePricing('monthly')"
-                        data-ar="شهري" data-en="Monthly">شهري</button>
-                    <button class="toggle-btn" data-period="yearly" onclick="togglePricing('yearly')">
-                        <span data-ar="سنوي" data-en="Yearly">سنوي</span>
-                        <span class="save-badge" data-ar="وفر 20%" data-en="Save 20%">وفر 20%</span>
-                    </button>
-                </div>
+                <!-- Pricing Toggle (Removed for Law Firm, or kept as Business/Individual) -->
+                <!-- Simplified for legal services -->
             </div>
 
             <div class="row g-4 justify-content-center">
-                <!-- Plan 1 - Starter -->
+                <!-- Plan 1 - Hourly -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
-                        <h3 class="plan-name" data-ar="المبتدئ" data-en="Starter">المبتدئ</h3>
+                        <h3 class="plan-name" data-ar="استشارة سريعة" data-en="Quick Consultation">استشارة سريعة</h3>
                         <div class="plan-price">
-                            <span class="price-amount monthly-price">49</span>
-                            <span class="price-amount yearly-price" style="display:none;">470</span>
-                            <span class="price-currency">$</span>
-                            <span class="price-period">/<span class="period-text" data-ar="شهرياً"
-                                    data-en="month">شهرياً</span></span>
+                            <span class="price-amount">500</span>
+                            <span class="price-currency">EGP</span>
+                            <span class="price-period">/<span class="period-text" data-ar="ساعة"
+                                    data-en="hour">ساعة</span></span>
                         </div>
                         <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> <span data-ar="5 مشاريع" data-en="5 Projects">5
-                                    مشاريع</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="مساحة 10 جيجا" data-en="10GB Storage">مساحة
-                                    10 جيجا</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="دعم فني" data-en="Technical Support">دعم
-                                    فني</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="تقارير أساسية"
-                                    data-en="Basic Reports">تقارير أساسية</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="مكالمة هاتفية أو فيديو"
+                                    data-en="Phone or Video Call">مكالمة هاتفية أو فيديو</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="تحليل أولي للموقف"
+                                    data-en="Initial Situation Analysis">تحليل أولي للموقف</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="نصيحة قانونية فورية"
+                                    data-en="Immediate Legal Advice">نصيحة قانونية فورية</span></li>
                         </ul>
-                        <button class="btn btn-outline-custom w-100" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك
+                        <button class="btn btn-outline-custom w-100" data-ar="احجز الآن" data-en="Book Now">احجز
                             الآن</button>
                     </div>
                 </div>
 
-                <!-- Plan 2 - Professional (Popular) -->
+                <!-- Plan 2 - Case Study (Popular) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="pricing-card popular">
-                        <div class="popular-badge" data-ar="الأكثر شعبية" data-en="Most Popular">الأكثر شعبية</div>
-                        <h3 class="plan-name" data-ar="المحترف" data-en="Professional">المحترف</h3>
+                        <div class="popular-badge" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</div>
+                        <h3 class="plan-name" data-ar="دراسة قضية" data-en="Case Study">دراسة قضية</h3>
                         <div class="plan-price">
-                            <span class="price-amount monthly-price">99</span>
-                            <span class="price-amount yearly-price" style="display:none;">950</span>
-                            <span class="price-currency">$</span>
-                            <span class="price-period">/<span class="period-text" data-ar="شهرياً"
-                                    data-en="month">شهرياً</span></span>
+                            <span class="price-amount">2000</span>
+                            <span class="price-currency">EGP</span>
+                            <span class="price-period">/<span class="period-text" data-ar="ملف"
+                                    data-en="file">ملف</span></span>
                         </div>
                         <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> <span data-ar="مشاريع غير محدودة"
-                                    data-en="Unlimited Projects">مشاريع غير محدودة</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="مساحة 100 جيجا"
-                                    data-en="100GB Storage">مساحة 100 جيجا</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="دعم فني أولوية"
-                                    data-en="Priority Support">دعم فني أولوية</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="تقارير متقدمة"
-                                    data-en="Advanced Reports">تقارير متقدمة</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="API متقدم" data-en="Advanced API">API
-                                    متقدم</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="مراجعة شاملة للمستندات"
+                                    data-en="Comprehensive Document Review">مراجعة شاملة للمستندات</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="كتابة مذكرة رأي قانوني"
+                                    data-en="Legal Opinion Memo">كتابة مذكرة رأي قانوني</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="خطة عمل للمتابعة" data-en="Action Plan">خطة
+                                    عمل للمتابعة</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="اجتماع حضوري"
+                                    data-en="In-person Meeting">اجتماع حضوري</span></li>
                         </ul>
-                        <button class="btn btn-primary-custom btn-primary-dark w-100" data-ar="اشترك الآن"
-                            data-en="Subscribe Now">اشترك
-                            الآن</button>
+                        <button class="btn btn-primary-custom btn-primary-dark w-100" data-ar="اطلب دراسة"
+                            data-en="Request Study">اطلب دراسة</button>
                     </div>
                 </div>
 
-                <!-- Plan 3 - Enterprise -->
+                <!-- Plan 3 - Annual Contracts -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="pricing-card">
-                        <h3 class="plan-name" data-ar="المؤسسات" data-en="Enterprise">المؤسسات</h3>
+                        <h3 class="plan-name" data-ar="عقود الشركات" data-en="Corporate Retainer">عقود الشركات</h3>
                         <div class="plan-price">
                             <span class="price-amount" data-ar="مخصص" data-en="Custom">مخصص</span>
                         </div>
                         <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> <span data-ar="كل المميزات" data-en="All Features">كل
-                                    المميزات</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="مساحة غير محدودة"
-                                    data-en="Unlimited Storage">مساحة غير محدودة</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="مدير حساب مخصص"
-                                    data-en="Dedicated Account Manager">مدير حساب مخصص</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="تدريب فريق العمل"
-                                    data-en="Team Training">تدريب فريق العمل</span></li>
-                            <li><i class="fas fa-check"></i> <span data-ar="SLA مخصص" data-en="Custom SLA">SLA
-                                    مخصص</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="دعم قانوني مستمر"
+                                    data-en="Ongoing Legal Support">دعم قانوني مستمر</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="صياغة ومراجعة العقود"
+                                    data-en="Contract Drafting & Review">صياغة ومراجعة العقود</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="تمثيل قانوني"
+                                    data-en="Legal Representation">تمثيل قانوني</span></li>
+                            <li><i class="fas fa-check"></i> <span data-ar="أولوية في الرد"
+                                    data-en="Priority Response">أولوية في الرد</span></li>
                         </ul>
-                        <button class="btn btn-outline-custom w-100" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك
-                            الآن</button>
+                        <button class="btn btn-outline-custom w-100" data-ar="تواصل معنا" data-en="Contact Us">تواصل
+                            معنا</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== TESTIMONIALS SECTION ==================== -->
-    <section id="testimonials" class="testimonials-section">
+    <!-- ==================== TESTIMONIALS SECTION (QUOTE WALL) ==================== -->
+    <section id="testimonials" class="testimonials-section bg-light py-5">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title" data-ar="ماذا يقول عملاؤنا" data-en="What Our Customers Say">ماذا يقول عملاؤنا
-                </h2>
-                <p class="section-subtitle" data-ar="آراء حقيقية من عملاء راضين"
-                    data-en="Real feedback from satisfied clients">
-                    آراء حقيقية من عملاء راضين
-                </p>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-primary fw-bold text-uppercase d-block mb-2" style="letter-spacing: 2px;">قصص
+                    نجاح</span>
+                <h2 class="section-title display-5" data-ar="ماذا يقول عملاؤنا" data-en="What Our Customers Say">ماذا
+                    يقول عملاؤنا</h2>
             </div>
 
-            <div class="swiper customerSwiper pb-5">
-                <div class="swiper-wrapper">
-                    <!-- Testimonial 1 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text"
-                                data-ar="&quot;منصة رائعة ساعدتنا في تحسين الإنتاجية بشكل كبير. الدعم الفني ممتاز والأدوات سهلة الاستخدام.&quot;"
-                                data-en="&quot;Great platform that helped us improve productivity significantly. Excellent technical support and easy-to-use tools.&quot;">
-                                "منصة رائعة ساعدتنا في تحسين الإنتاجية بشكل كبير. الدعم الفني ممتاز والأدوات سهلة
-                                الاستخدام."
-                            </p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1748111406445-f49a9cb49fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=100"
-                                    alt="Ahmed">
-                                <div>
-                                    <h5 class="author-name" data-ar="أحمد محمد" data-en="Ahmed Mohamed">أحمد محمد</h5>
-                                    <p class="author-role" data-ar="مدير تقني" data-en="Technical Manager">مدير تقني</p>
-                                </div>
+            <div class="row g-4" data-masonry='{"percentPosition": true }'>
+                <!-- Quote 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100 p-4" style="background: #fff; border-radius: 16px;">
+                        <div class="text-warning mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.8;">"ساعدوني في استرداد حقوقي بالكامل في
+                            قضية عمالية معقدة. لم أكن أتوقع هذه النتيجة المبهرة، شكراً لكم على الاحترافية."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">أ</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">أحمد محمد</h6>
+                                <small class="text-muted">مهندس</small>
                             </div>
                         </div>
                     </div>
-                    <!-- Testimonial 2 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text"
-                                data-ar="&quot;تجربة استثنائية! واجهة المستخدم بسيطة والميزات المتقدمة تلبي جميع احتياجاتنا.&quot;"
-                                data-en="&quot;Exceptional experience! Simple user interface and advanced features meet all our needs.&quot;">
-                                "تجربة استثنائية! واجهة المستخدم بسيطة والميزات المتقدمة تلبي جميع احتياجاتنا."
-                            </p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1748111406445-f49a9cb49fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=100"
-                                    alt="Sara">
-                                <div>
-                                    <h5 class="author-name" data-ar="سارة علي" data-en="Sara Ali">سارة علي</h5>
-                                    <p class="author-role" data-ar="مديرة مشاريع" data-en="Project Manager">مديرة مشاريع
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text"
-                                data-ar="&quot;أفضل استثمار قمنا به هذا العام. نوصي بها بشدة لكل الشركات الناشئة.&quot;"
-                                data-en="&quot;Best investment we made this year. Highly recommend it to all startups.&quot;">
-                                "أفضل استثمار قمنا به هذا العام. نوصي بها بشدة لكل الشركات الناشئة."
-                            </p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1748111406445-f49a9cb49fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=100"
-                                    alt="Khaled">
-                                <div>
-                                    <h5 class="author-name" data-ar="خالد حسن" data-en="Khaled Hassan">خالد حسن</h5>
-                                    <p class="author-role" data-ar="رائد أعمال" data-en="Entrepreneur">رائد أعمال</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 4 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text"
-                                data-ar="&quot;تجربة استثنائية! واجهة المستخدم بسيطة والميزات المتقدمة تلبي جميع احتياجاتنا.&quot;"
-                                data-en="&quot;Exceptional experience! Simple user interface and advanced features meet all our needs.&quot;">
-                                "تجربة استثنائية! واجهة المستخدم بسيطة والميزات المتقدمة تلبي جميع احتياجاتنا."
-                            </p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1748111406445-f49a9cb49fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=100"
-                                    alt="Sara">
-                                <div>
-                                    <h5 class="author-name" data-ar="سارة علي" data-en="Sara Ali">سارة علي</h5>
-                                    <p class="author-role" data-ar="مديرة مشاريع" data-en="Project Manager">مديرة مشاريع
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-pagination"></div>
+
+                <!-- Quote 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 p-4" style="background: #fff; border-radius: 16px;">
+                        <div class="text-warning mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.8;">"أفضل مكتب قمت بالتعامل معه لتوثيق
+                            عقود شركتي الناشئة. السرعة والدقة في العمل مذهلة حقاً."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">س</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">سارة علي</h6>
+                                <small class="text-muted">مديرة شركة</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 p-4"
+                        style="background: var(--primary-color); color: #000; border-radius: 16px;">
+                        <div class="text-dark mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="mb-4 fs-6 fw-medium" style="line-height: 1.8;">"كنت في ورطة قانونية كبيرة، ولكن بفضل
+                            الله ثم خبرة المستشارين في محاميك، تم حل المشكلة تماماً."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-white text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">خ</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">خالد حسن</h6>
+                                <small class="text-dark opacity-75">رائد أعمال</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100 p-4" style="background: #fff; border-radius: 16px;">
+                        <div class="text-warning mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.8;">"التعامل الراقي والاهتمام بالتفاصيل هو
+                            ما يميز هذا المكتب. أنصح بهم بشدة."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">م</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">محمد إبراهيم</h6>
+                                <small class="text-muted">طبيب</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 p-4" style="background: #fff; border-radius: 16px;">
+                        <div class="text-warning mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.8;">"تجربة ممتازة من البداية للنهاية.
+                            شكراً لكم."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">ن</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">نوران أحمد</h6>
+                                <small class="text-muted">مدرسة</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 p-4" style="background: #fff; border-radius: 16px;">
+                        <div class="text-warning mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.8;">"المصداقية والشفافية في التعامل اهم ما
+                            يميزهم."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px;">ي</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">ياسر محمود</h6>
+                                <small class="text-muted">محاسب</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ==================== FAQ SECTION ==================== -->
-    <section id="faq" class="faq-section">
+    <!-- ==================== FAQ SECTION (2-COL) ==================== -->
+    <section id="faq" class="faq-section py-5">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title" data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة
-                </h2>
-                <p class="section-subtitle" data-ar="كل ما تحتاج معرفته" data-en="Everything you need to know">
-                    كل ما تحتاج معرفته
-                </p>
-            </div>
-
-            <div class="accordion-custom" data-aos="fade-up">
-                <!-- FAQ 1 -->
-                <div class="accordion-item-custom">
-                    <button class="accordion-button-custom" onclick="toggleAccordion(this)">
-                        <span data-ar="كيف يمكنني البدء؟" data-en="How can I get started?">كيف يمكنني البدء؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content-custom">
-                        <p data-ar="يمكنك البدء بإنشاء حساب مجاني والاطلاع على جميع المميزات لمدة 14 يوم."
-                            data-en="You can start by creating a free account and explore all features for 14 days.">
-                            يمكنك البدء بإنشاء حساب مجاني والاطلاع على جميع المميزات لمدة 14 يوم.
-                        </p>
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h2 class="section-title display-6 mb-4" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة
+                    </h2>
+                    <p class="text-muted" data-ar="إجابات على أكثر الأسئلة شيوعاً حول خدماتنا القانونية."
+                        data-en="Answers to the most common questions about our legal services.">
+                        إجابات على أكثر الأسئلة شيوعاً حول خدماتنا القانونية.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#contactModal" onclick="openContactModal(); return false;"
+                            class="btn btn-primary-custom" data-ar="لديك سؤال آخر؟"
+                            data-en="Have another question?">لديك سؤال آخر؟</a>
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="accordion-item-custom">
-                    <button class="accordion-button-custom" onclick="toggleAccordion(this)">
-                        <span data-ar="هل يمكنني تغيير الخطة لاحقاً؟" data-en="Can I change my plan later?">هل يمكنني
-                            تغيير الخطة لاحقاً؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content-custom">
-                        <p data-ar="نعم، يمكنك الترقية أو التخفيض في أي وقت حسب احتياجاتك."
-                            data-en="Yes, you can upgrade or downgrade at any time according to your needs.">
-                            نعم، يمكنك الترقية أو التخفيض في أي وقت حسب احتياجاتك.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="accordion-item-custom">
-                    <button class="accordion-button-custom" onclick="toggleAccordion(this)">
-                        <span data-ar="ما هي وسائل الدفع المتاحة؟" data-en="What payment methods are available?">ما هي
-                            وسائل الدفع المتاحة؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content-custom">
-                        <p data-ar="نقبل جميع البطاقات الائتمانية الرئيسية والباي بال والتحويل البنكي."
-                            data-en="We accept all major credit cards, PayPal, and bank transfer.">
-                            نقبل جميع البطاقات الائتمانية الرئيسية والباي بال والتحويل البنكي.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="accordion-item-custom">
-                    <button class="accordion-button-custom" onclick="toggleAccordion(this)">
-                        <span data-ar="هل هناك دعم فني؟" data-en="Is there technical support?">هل هناك دعم فني؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content-custom">
-                        <p data-ar="نعم، لدينا فريق دعم متاح 24/7 عبر البريد الإلكتروني والدردشة المباشرة."
-                            data-en="Yes, we have a support team available 24/7 via email and live chat.">
-                            نعم، لدينا فريق دعم متاح 24/7 عبر البريد الإلكتروني والدردشة المباشرة.
-                        </p>
+                <div class="col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="accordion-custom mb-3">
+                                <div class="accordion-item-custom border rounded-3 p-3 bg-white shadow-sm h-100">
+                                    <h5 class="fw-bold mb-3" data-ar="كم تكلفة الاستشارة؟"
+                                        data-en="How much does a consultation cost?">كم تكلفة الاستشارة؟</h5>
+                                    <p class="text-muted small mb-0"
+                                        data-ar="تبدأ أسعار الاستشارات من 500 جنيه مصري حسب نوع القضية ومدتها."
+                                        data-en="Consultation prices start from 500 EGP depending on the case type and duration.">
+                                        تبدأ أسعار الاستشارات من 500 جنيه مصري حسب نوع القضية ومدتها.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-custom">
+                                <div class="accordion-item-custom border rounded-3 p-3 bg-white shadow-sm h-100">
+                                    <h5 class="fw-bold mb-3" data-ar="ما هي إجراءات التوكيل؟"
+                                        data-en="Power of Attorney Procedures?">ما هي إجراءات التوكيل؟</h5>
+                                    <p class="text-muted small mb-0"
+                                        data-ar="يتم عمل توكيل رسمي عام في القضايا باسم المحامي في الشهر العقاري."
+                                        data-en="An official general power of attorney is made at the notary public.">
+                                        يتم عمل توكيل رسمي عام في القضايا باسم المحامي في الشهر العقاري.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="accordion-custom mb-3">
+                                <div class="accordion-item-custom border rounded-3 p-3 bg-white shadow-sm h-100">
+                                    <h5 class="fw-bold mb-3" data-ar="هل تضمنون الفوز؟"
+                                        data-en="Do you guarantee winning?">هل تضمنون الفوز؟</h5>
+                                    <p class="text-muted small mb-0"
+                                        data-ar="نلتزم ببذل أقصى عناية قانونية، ولكن القانون يمنع ضمان النتائج بشكل مطلق."
+                                        data-en="We commit to maximum diligence, but results cannot be guaranteed.">
+                                        نلتزم ببذل أقصى عناية قانونية، ولكن القانون يمنع ضمان النتائج بشكل مطلق.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-custom">
+                                <div class="accordion-item-custom border rounded-3 p-3 bg-white shadow-sm h-100">
+                                    <h5 class="fw-bold mb-3" data-ar="هل معلوماتي سرية؟"
+                                        data-en="Is my info confidential?">هل معلوماتي سرية؟</h5>
+                                    <p class="text-muted small mb-0" data-ar="بالتأكيد، السرية هي جوهر عملنا."
+                                        data-en="Absolutely, confidentiality is our core.">بالتأكيد، السرية هي جوهر
+                                        عملنا.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== Our Team Section ================ -->
+    <!-- ==================== Our Team Section (Grid) ================ -->
     <section id="team" class="team-section py-5">
         <div class="container">
             <div class="section-header text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title" data-ar="فريق العمل" data-en="Our Team">فريق العمل</h2>
-                <p class="section-subtitle" data-ar="نخبة من الخبراء والمبدعين يقودون منصتي نحو القمة"
-                    data-en="Expert creators leading our platform to the top">
-                    نخبة من الخبراء والمبدعين يقودون منصتي نحو القمة
+                <h2 class="section-title" data-ar="نخبة المحامين" data-en="Our Legal Experts">نخبة المحامين</h2>
+                <p class="section-subtitle" data-ar="فريق من ذوي الخبرة والكفاءة"
+                    data-en="A team of experience and competence">
+                    فريق من ذوي الخبرة والكفاءة
                 </p>
             </div>
 
-            <div class="swiper teamSwiper pb-5">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="team-card text-center">
-                            <div class="team-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200"
-                                    alt="Team Member">
-                                <div class="team-social-overlay">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-info mt-3">
-                                <h4 class="member-name" data-ar="محمد أحمد" data-en="Mohamed Ahmed">محمد أحمد</h4>
-                                <p class="member-role text-primary" data-ar="الرئيس التنفيذي" data-en="CEO">الرئيس
-                                    التنفيذي
-                                </p>
-                            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Member 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="team-card text-center h-100">
+                        <div class="team-img-wrapper mb-3 mx-auto"
+                            style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400"
+                                alt="Team Member" class="w-100 h-100 object-fit-cover">
                         </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="team-card text-center">
-                            <div class="team-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
-                                    alt="Team Member">
-                                <div class="team-social-overlay">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-info mt-3">
-                                <h4 class="member-name" data-ar="ليلى علي" data-en="Layla Ali">ليلى علي</h4>
-                                <p class="member-role text-primary" data-ar="مديرة التقنية" data-en="CTO">مديرة التقنية
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="team-card text-center">
-                            <div class="team-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
-                                    alt="Team Member">
-                                <div class="team-social-overlay">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-info mt-3">
-                                <h4 class="member-name" data-ar="عمر خالد" data-en="Omar Khaled">عمر خالد</h4>
-                                <p class="member-role text-primary" data-ar="مصمم واجهات" data-en="UI/UX Designer">مصمم
-                                    واجهات</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="team-card text-center">
-                            <div class="team-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200"
-                                    alt="Team Member">
-                                <div class="team-social-overlay">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-info mt-3">
-                                <h4 class="member-name" data-ar="محمد أحمد" data-en="Mohamed Ahmed">محمد أحمد</h4>
-                                <p class="member-role text-primary" data-ar="الرئيس التنفيذي" data-en="CEO">الرئيس
-                                    التنفيذي
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="team-card text-center">
-                            <div class="team-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
-                                    alt="Team Member">
-                                <div class="team-social-overlay">
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-info mt-3">
-                                <h4 class="member-name" data-ar="نور حسن" data-en="Noor Hassan">نور حسن</h4>
-                                <p class="member-role text-primary" data-ar="مديرة التسويق" data-en="Marketing Manager">
-                                    مديرة التسويق</p>
+                        <div class="team-info">
+                            <h4 class="member-name fw-bold" data-ar="محمد أحمد" data-en="Mohamed Ahmed">محمد أحمد</h4>
+                            <p class="member-role text-primary small text-uppercase fw-bold" data-ar="الشريك المؤسس"
+                                data-en="Founding Partner">الشريك المؤسس</p>
+                            <div class="d-flex justify-content-center gap-3 mt-3 opacity-50">
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+
+                <!-- Member 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card text-center h-100">
+                        <div class="team-img-wrapper mb-3 mx-auto"
+                            style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+                                alt="Team Member" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="member-name fw-bold" data-ar="ليلى علي" data-en="Layla Ali">ليلى علي</h4>
+                            <p class="member-role text-primary small text-uppercase fw-bold" data-ar="مستشارة قانونية"
+                                data-en="Legal Consultant">مستشارة قانونية</p>
+                            <div class="d-flex justify-content-center gap-3 mt-3 opacity-50">
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-envelope fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card text-center h-100">
+                        <div class="team-img-wrapper mb-3 mx-auto"
+                            style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
+                                alt="Team Member" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="member-name fw-bold" data-ar="عمر خالد" data-en="Omar Khaled">عمر خالد</h4>
+                            <p class="member-role text-primary small text-uppercase fw-bold" data-ar="محامي شركات"
+                                data-en="Corporate Lawyer">محامي شركات</p>
+                            <div class="d-flex justify-content-center gap-3 mt-3 opacity-50">
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== Blog SECTION  ======================== -->
-    <section id="blog" class="blog-section py-5">
+    <!-- ==================== Blog SECTION (Grid) ======================== -->
+    <section id="blog" class="blog-section py-5 bg-light">
         <div class="container">
             <div class="section-header text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title" data-ar="آخر المقالات" data-en="Latest Blog Posts">آخر المقالات</h2>
-                <p class="section-subtitle" data-ar="تابع نصائحنا وتحديثاتنا لتطوير مشاريعك الرقمية"
-                    data-en="Follow our tips and updates to grow your digital projects">
-                    تابع نصائحنا وتحديثاتنا لتطوير مشاريعك الرقمية
+                <h2 class="section-title" data-ar="المدونة القانونية" data-en="Legal Blog">المدونة القانونية</h2>
+                <p class="section-subtitle" data-ar="تابع نصائحنا وتحديثات القوانين"
+                    data-en="Follow our tips and law updates">
+                    تابع نصائحنا وتحديثات القوانين
                 </p>
             </div>
 
-            <div class="swiper blogSwiper pb-5" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card blog-card border-0 shadow-sm h-100">
-                            <div class="blog-img-box">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500"
-                                    class="card-img-top" alt="Blog 1">
-                                <span class="badge btn-primary-custom blog-category">تكنولوجيا</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <div class="blog-meta mb-2">
-                                    <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 15 يناير 202
-                                        6 </small>
-                                </div>
-                                <h4 class="card-title h5 fw-bold" data-ar="كيف تزيد إنتاجية فريقك عن بعد؟"
-                                    data-en="How to boost remote team productivity?">
-                                    كيف تزيد إنتاجية فريقك عن بعد؟
-                                </h4>
-                                <p class="card-text text-muted small"
-                                    data-ar="تعرف على أفضل الأدوات والممارسات لإدارة فريق عملك الرقمي بكفاءة..."
-                                    data-en="Learn the best tools and practices to manage your digital team efficiently...">
-                                    تعرف على أفضل الأدوات والممارسات لإدارة فريق عملك الرقمي بكفاءة...
-                                </p>
-                                <a href="#" class="btn btn-link p-0 text-decoration-none fw-bold" data-ar="اقرأ المزيد"
-                                    data-en="Read More">
-                                    اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i>
-                                </a>
-                            </div>
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 12px;">
+                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=500"
+                            class="card-img-top" alt="Blog 1" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <small class="text-primary fw-bold text-uppercase d-block mb-2">قوانين عمل</small>
+                            <h5 class="card-title fw-bold mb-3" data-ar="التعديلات الجديدة على قانون العمل"
+                                data-en="New Labour Law Amendments">التعديلات الجديدة على قانون العمل</h5>
+                            <p class="card-text text-muted small mb-4">ما يجب أن يعرفه كل موظف وصاحب عمل عن الحقوق
+                                والواجبات الجديدة...</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none" data-ar="اقرأ المزيد"
+                                data-en="Read More">اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i></a>
                         </div>
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="card blog-card border-0 shadow-sm h-100">
-                            <div class="blog-img-box">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=500"
-                                    class="card-img-top" alt="Blog 2">
-                                <span class="badge btn-primary-custom blog-category">أدلة</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <div class="blog-meta mb-2">
-                                    <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 10 يناير 202
-                                        6 </small>
-                                </div>
-                                <h4 class="card-title h5 fw-bold" data-ar="دليل شامل لإطلاق منتجك الرقمي الأول"
-                                    data-en="Guide to launching your first digital product">
-                                    دليل شامل لإطلاق منتجك الرقمي الأول
-                                </h4>
-                                <p class="card-text text-muted small"
-                                    data-ar="من الفكرة إلى السوق، خطوات مدروسة تضمن لك بداية قوية لمنتجك..."
-                                    data-en="From idea to market, deliberate steps to ensure a strong start...">
-                                    من الفكرة إلى السوق، خطوات مدروسة تضمن لك بداية قوية لمنتجك...
-                                </p>
-                                <a href="#" class="btn btn-link p-0 text-decoration-none fw-bold" data-ar="اقرأ المزيد"
-                                    data-en="Read More">
-                                    اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card blog-card border-0 shadow-sm h-100">
-                            <div class="blog-img-box">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=500"
-                                    class="card-img-top" alt="Blog 3">
-                                <span class="badge btn-primary-custom blog-category">تحديثات</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <div class="blog-meta mb-2">
-                                    <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 5 يناير 202
-                                        6</small>
-                                </div>
-                                <h4 class="card-title h5 fw-bold" data-ar="تحديثات منصتي لشهر يناير 2026"
-                                    data-en="Our Platform updates for January 2026">
-                                    تحديثات منصتي لشهر يناير 2026
-                                </h4>
-                                <p class="card-text text-muted small"
-                                    data-ar="اكتشف الميزات الجديدة التي أضفناها لتحسين تجربة إدارة مشاريعك..."
-                                    data-en="Discover the new features we've added to improve your experience...">
-                                    اكتشف الميزات الجديدة التي أضفناها لتحسين تجربة إدارة مشاريعك...
-                                </p>
-                                <a href="#" class="btn btn-link p-0 text-decoration-none fw-bold" data-ar="اقرأ المزيد"
-                                    data-en="Read More">
-                                    اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card blog-card border-0 shadow-sm h-100">
-                            <div class="blog-img-box">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=500"
-                                    class="card-img-top" alt="Blog 2">
-                                <span class="badge btn-primary-custom blog-category">أدلة</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <div class="blog-meta mb-2">
-                                    <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 10 يناير 202
-                                        6 </small>
-                                </div>
-                                <h4 class="card-title h5 fw-bold" data-ar="دليل شامل لإطلاق منتجك الرقمي الأول"
-                                    data-en="Guide to launching your first digital product">
-                                    دليل شامل لإطلاق منتجك الرقمي الأول
-                                </h4>
-                                <p class="card-text text-muted small"
-                                    data-ar="من الفكرة إلى السوق، خطوات مدروسة تضمن لك بداية قوية لمنتجك..."
-                                    data-en="From idea to market, deliberate steps to ensure a strong start...">
-                                    من الفكرة إلى السوق، خطوات مدروسة تضمن لك بداية قوية لمنتجك...
-                                </p>
-                                <a href="#" class="btn btn-link p-0 text-decoration-none fw-bold" data-ar="اقرأ المزيد"
-                                    data-en="Read More">
-                                    اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+
+                <!-- Blog 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 12px;">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=500"
+                            class="card-img-top" alt="Blog 2" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <small class="text-primary fw-bold text-uppercase d-block mb-2">شركات</small>
+                            <h5 class="card-title fw-bold mb-3" data-ar="كيف تؤسس شركتك الناشئة قانونياً؟"
+                                data-en="How to legally start your startup?">كيف تؤسس شركتك الناشئة قانونياً؟</h5>
+                            <p class="card-text text-muted small mb-4">دليل خطوة بخطوة للإجراءات القانونية لتأسيس
+                                الشركات في مصر...</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none" data-ar="اقرأ المزيد"
+                                data-en="Read More">اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 12px;">
+                        <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&q=80&w=500"
+                            class="card-img-top" alt="Blog 3" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <small class="text-primary fw-bold text-uppercase d-block mb-2">أحوال شخصية</small>
+                            <h5 class="card-title fw-bold mb-3" data-ar="نصائح هامة قبل رفع دعوى طلاق"
+                                data-en="Important tips before filing for divorce">نصائح هامة قبل رفع دعوى طلاق</h5>
+                            <p class="card-text text-muted small mb-4">تعرف على حقوقك والخطوات القانونية السليمة لضمان
+                                موقفك...</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none" data-ar="اقرأ المزيد"
+                                data-en="Read More">اقرأ المزيد <i class="fas fa-arrow-left ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FINAL CTA SECTION ==================== -->
-    <section class="cta-section">
-        <div class="container text-center" data-aos="fade-up">
-            <h2 class="cta-title" data-ar="جاهز للبدء؟" data-en="Ready to Get Started?">جاهز للبدء؟</h2>
-            <p class="cta-subtitle" data-ar="انضم إلى آلاف العملاء الذين يثقون بنا"
-                data-en="Join thousands of customers who trust us">
-                انضم إلى آلاف العملاء الذين يثقون بنا
-            </p>
-            <button class="btn btn-light btn-lg" data-ar="ابدأ الآن مجاناً" data-en="Start Free Now">
-                ابدأ الآن مجاناً
-            </button>
+    <!-- ==================== CONTACT SECTION (SPLIT) ==================== -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="bg-white p-5 rounded-4 shadow-sm border">
+                        <h2 class="section-title mb-4" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
+                        <p class="text-muted mb-4" data-ar="املأ النموذج وسنقوم بالرد عليك في أقرب وقت."
+                            data-en="Fill the form and we will reply to you as soon as possible.">املأ النموذج وسنقوم
+                            بالرد عليك في أقرب وقت.</p>
+
+                        <form onsubmit="return submitContactForm(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="contactName" placeholder="الاسم"
+                                            required>
+                                        <label for="contactName" data-ar="الاسم" data-en="Name">الاسم</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="البريد"
+                                            required>
+                                        <label for="contactEmail" data-ar="البريد" data-en="Email">البريد</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="contactSubject">
+                                            <option value="" selected data-ar="اختر الموضوع" data-en="Select Subject">
+                                                اختر الموضوع</option>
+                                            <option value="1">استشارة قانونية</option>
+                                            <option value="2">تأسيس شركات</option>
+                                            <option value="3">أخرى</option>
+                                        </select>
+                                        <label for="contactSubject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="رسالتك" id="contactMessage"
+                                            style="height: 150px" required></textarea>
+                                        <label for="contactMessage" data-ar="رسالتك"
+                                            data-en="Your Message">رسالتك</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold">
+                                        <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Map -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="h-100 d-flex flex-column gap-4">
+                        <!-- Info Cards -->
+                        <div class="contact-card bg-primary-dark text-white p-4 rounded-4 shadow-sm"
+                            style="background: var(--secondary-color);">
+                            <div class="d-flex align-items-center gap-4 mb-4">
+                                <div class="icon-box bg-primary text-white p-3 rounded-circle">
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                                <div>
+                                    <small class="text-white-50 text-uppercase fw-bold"
+                                        style="letter-spacing: 1px;">اتصل بنا</small>
+                                    <h5 class="fw-bold mb-0 mt-1" style="direction: ltr;">+20 100 000 0000</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4 mb-4">
+                                <div class="icon-box bg-primary text-white p-3 rounded-circle">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </div>
+                                <div>
+                                    <small class="text-white-50 text-uppercase fw-bold"
+                                        style="letter-spacing: 1px;">البريد الإلكتروني</small>
+                                    <h5 class="fw-bold mb-0 mt-1">info@mohameek.com</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="icon-box bg-primary text-white p-3 rounded-circle">
+                                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                                </div>
+                                <div>
+                                    <small class="text-white-50 text-uppercase fw-bold"
+                                        style="letter-spacing: 1px;">العنوان</small>
+                                    <h5 class="fw-bold mb-0 mt-1">القاهرة الجديدة، التجمع الخامس</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Mockup -->
+                        <div class="map-container flex-grow-1 rounded-4 overflow-hidden shadow-sm position-relative bg-light"
+                            style="min-height: 300px;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.60389552708!2d31.18842358525046!3d30.0596184702951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583faec72097e3%3A0x52df713b7b251ce7!2sNew%20Cairo%20City%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1705245892541!5m2!1sen!2seg"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -898,51 +1067,52 @@
                 <div class="col-lg-3">
                     <div class="footer-brand mb-3">
                         <div class="logo-icon">
-                            <i class="fas fa-bolt"></i>
+                            <i class="fas fa-balance-scale"></i>
                         </div>
-                        <span class="logo-text">منصتي</span>
+                        <span class="logo-text">محاميك | Mohameek</span>
                     </div>
-                    <p class="footer-desc" data-ar="منصة متكاملة لإدارة مشاريعك الرقمية بكفاءة عالية"
-                        data-en="A complete platform to manage your digital projects efficiently">منصة متكاملة لإدارة
-                        مشاريعك الرقمية بكفاءة عالية</p>
+                    <p class="footer-desc" data-ar="مكتب محاماة رائد يقدم استشارات وحلول قانونية شاملة."
+                        data-en="Leading law firm providing comprehensive legal consultations and solutions.">مكتب
+                        محاماة رائد يقدم استشارات وحلول قانونية شاملة.</p>
                 </div>
 
                 <!-- Product Links -->
                 <div class="col-4 col-lg-3">
-                    <h5 class="footer-title" data-ar="المنتج" data-en="Product">المنتج</h5>
+                    <h5 class="footer-title" data-ar="خدماتنا" data-en="Services">خدماتنا</h5>
                     <ul class="footer-links px-0">
-                        <li><a href="#features" data-ar="المميزات" data-en="Features">المميزات</a></li>
-                        <li><a href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a></li>
-                        <li><a href="#" data-ar="التحديثات" data-en="Updates">التحديثات</a></li>
+                        <li><a href="#services" data-ar="تأسيس شركات" data-en="Corporate">تأسيس شركات</a></li>
+                        <li><a href="#services" data-ar="عقود" data-en="Contracts">عقود</a></li>
+                        <li><a href="#services" data-ar="أحوال شخصية" data-en="Family Law">أحوال شخصية</a></li>
                     </ul>
                 </div>
 
                 <!-- Company Links -->
                 <div class="col-4 col-lg-3">
-                    <h5 class="footer-title" data-ar="الشركة" data-en="Company">الشركة</h5>
+                    <h5 class="footer-title" data-ar="المكتب" data-en="The Firm">المكتب</h5>
                     <ul class="footer-links px-0">
-                        <li><a href="#" data-ar="من نحن" data-en="About Us">من نحن</a></li>
-                        <li><a href="#" data-ar="المدونة" data-en="Blog">المدونة</a></li>
-                        <li><a href="#" data-ar="الوظائف" data-en="Careers">الوظائف</a></li>
+                        <li><a href="#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a></li>
+                        <li><a href="#blog" data-ar="المدونة" data-en="Blog">المدونة</a></li>
+                        <li><a href="#contactModal" onclick="openContactModal(); return false;" data-ar="تواصل معنا"
+                                data-en="Contact">تواصل معنا</a></li>
                     </ul>
                 </div>
 
                 <!-- Support Links -->
                 <div class="col-4 col-lg-3">
-                    <h5 class="footer-title" data-ar="الدعم" data-en="Support">الدعم</h5>
+                    <h5 class="footer-title" data-ar="معلوماتنا" data-en="Info">معلوماتنا</h5>
                     <ul class="footer-links px-0">
-                        <li><a href="#" data-ar="مركز المساعدة" data-en="Help Center">مركز المساعدة</a></li>
-                        <li><a href="#" data-ar="التوثيق" data-en="Documentation">التوثيق</a></li>
-                        <li><a href="#" onclick="openContactModal(); return false;" data-ar="اتصل بنا"
-                                data-en="Contact Us">اتصل بنا</a></li>
+                        <li><span class="text-muted"><i class="fas fa-phone me-2"></i> +20 1X XXX XXXX</span></li>
+                        <li><span class="text-muted"><i class="fas fa-envelope me-2"></i> info@mohameek.com</span></li>
+                        <li><span class="text-muted"><i class="fas fa-map-marker-alt me-2"></i> Cairo, Egypt</span></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Newsletter -->
             <div class="newsletter-section">
-                <h5 class="text-center mb-3" data-ar="اشترك في النشرة البريدية" data-en="Subscribe to Newsletter">اشترك
-                    في النشرة البريدية</h5>
+                <h5 class="text-center mb-3" data-ar="اشترك في النشرة القانونية"
+                    data-en="Subscribe to Legal Newsletter">اشترك
+                    في النشرة القانونية</h5>
                 <form class="newsletter-form" onsubmit="return false;">
                     <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني"
                         data-ar-placeholder="أدخل بريدك الإلكتروني" data-en-placeholder="Enter your email">
@@ -953,9 +1123,9 @@
 
             <!-- Bottom Bar -->
             <div class="footer-bottom">
-                <p class="copyright" data-ar="© 2026 جميع الحقوق محفوظة | صنع بواسطة Dreamium-tech"
-                    data-en="© 2026 All Rights Reserved | Made by Dreamium-tech">© 2026
-                    جميع الحقوق محفوظة | صنع بواسطة Dreamium-tech</p>
+                <p class="copyright" data-ar="© 2026 محاميك | Mohameek. جميع الحقوق محفوظة."
+                    data-en="© 2026 Mohameek. All Rights Reserved.">© 2026
+                    محاميك | Mohameek. جميع الحقوق محفوظة.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -970,7 +1140,7 @@
     <div class="modal-overlay" id="loginModal">
         <div class="modal-container">
             <div class="modal-header">
-                <h3 id="loginModalTitle">تسجيل الدخول</h3>
+                <h3 id="loginModalTitle" data-ar="بوابة العملاء" data-en="Client Portal">بوابة العملاء</h3>
                 <button class="modal-close" onclick="closeLoginModal()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -980,14 +1150,14 @@
             <div class="modal-tabs">
                 <button class="tab-btn active" onclick="switchTab('login')" data-ar="تسجيل الدخول" data-en="Login">تسجيل
                     الدخول</button>
-                <button class="tab-btn" onclick="switchTab('register')" data-ar="تسجيل جديد" data-en="Register">تسجيل
-                    جديد</button>
+                <button class="tab-btn" onclick="switchTab('register')" data-ar="فتح ملف جديد" data-en="New File">فتح
+                    ملف جديد</button>
             </div>
 
             <!-- Login Form -->
             <form class="modal-form" id="loginForm">
                 <div class="form-group">
-                    <label data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+                    <label data-ar="رقم الملف / البريد" data-en="File ID / Email">رقم الملف / البريد</label>
                     <div class="input-icon">
                         <i class="fas fa-envelope"></i>
                         <input type="email" class="form-control" required>
@@ -1178,7 +1348,7 @@
                         </div>
                         <div>
                             <p class="contact-info-label" data-ar="البريد" data-en="Email">البريد</p>
-                            <p class="contact-info-value">info@platform.com</p>
+                            <p class="contact-info-value">info@mohameek.com</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
@@ -1187,7 +1357,7 @@
                         </div>
                         <div>
                             <p class="contact-info-label" data-ar="الهاتف" data-en="Phone">الهاتف</p>
-                            <p class="contact-info-value">+966 50 123 4567</p>
+                            <p class="contact-info-value">+20 1X XXX XXXX</p>
                         </div>
                     </div>
                     <div class="contact-info-item">

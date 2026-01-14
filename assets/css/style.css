@@ -6,44 +6,49 @@
 
 /* ==================== CSS VARIABLES ==================== */
 :root {
-    /* Primary Colors */
-    --primary-color: #FF6A3A;
-    --primary-dark: #FF6A3A;
-    --primary-light: #FF6A3A;
+    /* Primary Colors - Gold */
+    --primary-color: #D4AF37;
+    --primary-dark: #B4941F;
+    --primary-light: #F3E5AB;
 
     /* Secondary Colors */
-    --secondary-color: #f3f4f6;
-    --secondary-dark: #e5e7eb;
+    --secondary-color: #1a1a1a;
+    --secondary-dark: #000000;
 
     /* Text Colors */
-    --text-primary: #111827;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
+    --text-primary: #111111;
+    --text-secondary: #4a4a4a;
+    --text-light: #7b7b7b;
 
     /* Background Colors */
     --bg-white: #ffffff;
-    --bg-light: #f9fafb;
-    --bg-gray: #f3f4f6;
+    --bg-light: #fdfbf7;
+    /* Very light beige/gold tint */
+    --bg-gray: #f5f5f5;
 
     /* Border & Shadow */
-    --border-color: rgba(0, 0, 0, 0.1);
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --border-color: rgba(212, 175, 55, 0.2);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.08);
+    /* Softer, diffused shadow */
+    --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.12);
 
     /* Spacing */
-    --section-padding: 5rem 0;
-    --container-padding: 1rem;
+    --section-padding: 6rem 0;
+    /* Increased spacing for luxury feel */
+    --container-padding: 1.5rem;
 
     /* Border Radius */
-    --radius-sm: 0.5rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    /* User requested 16px */
+    --radius-xl: 24px;
 
     /* Transitions */
-    --transition: all 0.3s ease;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Smoother interaction */
     /* button color */
     --bs-link-color: var(--primary-color);
     --bs-link-hover-color: var(--primary-dark);
@@ -51,10 +56,10 @@
 
 /* ==================== DARK MODE VARIABLES ==================== */
 [data-theme="dark"] {
-    /* Primary Colors - Lighter for dark mode */
-    --primary-color: #FF6A3A;
-    --primary-dark: #FF6A3A;
-    --primary-light: #FF6A3A;
+    /* Primary Colors - Lighter Gold for dark mode */
+    --primary-color: #D4AF37;
+    --primary-dark: #B4941F;
+    --primary-light: #F3E5AB;
 
     /* Text Colors - Inverted */
     --text-primary: #f9fafb;
@@ -63,20 +68,9 @@
     --bs-secondary-color: #d1d5db;
 
     /* Background Colors - Dark */
-    --bg-white: #111827;
-    --bg-light: #1f2937;
-    --bg-gray: #374151;
-
-    /* Border & Shadow */
-    --border-color: rgba(255, 255, 255, 0.1);
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-
-    /* button color */
-    --bs-link-color: var(--primary-color);
-    --bs-link-hover-color: var(--primary-dark);
+    --bg-white: #0B0B0B;
+    --bg-light: #121212;
+    --bg-gray: #1a1a1a;
 }
 
 /* ==================== GLOBAL STYLES ==================== */
@@ -87,11 +81,24 @@
 }
 
 body {
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.6;
+    font-family: 'Cairo', 'Inter', sans-serif;
+    line-height: 1.7;
+    /* Increased line-height for readability */
     color: var(--text-primary);
     background-color: var(--bg-white);
     overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-font {
+    font-family: 'Playfair Display', serif;
+    /* Serif for "Legal" feel */
+    font-weight: 700;
 }
 
 /* Smooth Scrolling */
@@ -101,7 +108,8 @@ html {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
+    /* Slightly wider container */
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
@@ -115,31 +123,40 @@ section {
 .navbar {
     background-color: transparent;
     transition: var(--transition);
-    padding: 1.25rem 0;
+    padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
+    /* Modern blur effect */
 }
 
 .navbar.scrolled {
-    background-color: var(--bg-white);
-    box-shadow: var(--shadow-md);
-    padding: 0.75rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background-color: rgba(11, 11, 11, 0.95);
 }
 
 .navbar-brand {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--text-primary);
     text-decoration: none;
+    letter-spacing: -0.02em;
 }
 
 .logo-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: var(--primary-color);
-    border-radius: var(--radius-lg);
+    width: 2.75rem;
+    height: 2.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #000;
+    font-size: 1.2rem;
 }
 
 .nav-link {
@@ -231,8 +248,38 @@ section {
 }
 
 .btn-outline-custom:hover {
-    background: var(--bg-light);
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
+
+/* ==================== BOOTSTRAP OVERRIDES ==================== */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.link-primary {
+    color: var(--primary-color) !important;
+}
+
+.link-primary:hover {
+    color: var(--primary-dark) !important;
+}
+
+
 
 [dir="rtl"] [type=email],
 [dir="rtl"] [type=number],
